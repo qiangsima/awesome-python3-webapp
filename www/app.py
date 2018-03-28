@@ -1,4 +1,4 @@
-__author__ = 'qiangsima'
+__author__ = 'sima'
 
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -8,8 +8,11 @@ from datetime import datetime
 
 from aiohttp import web
 
+
+@asyncio.coroutine
 def index(request):
     return web.Response(body=b"<h1>Awesome</h1>")
+
 
 async def init(loop):
     app = web.Application(loop=loop)
